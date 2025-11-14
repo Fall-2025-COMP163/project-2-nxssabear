@@ -99,6 +99,4 @@ The battle simulator was not modified, as instructed.
 
 # ▶️ How to Run
 
-Run the program from your terminal using:
-
 python project2_starter.py
