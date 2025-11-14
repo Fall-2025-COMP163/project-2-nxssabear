@@ -11,6 +11,7 @@
 The Character Abilities Showcase demonstrates inheritance, polymorphism, method overriding, and special abilities across multiple fantasy RPG-style classes. Each character features unique combat mechanics, stat profiles, and special moves. The included battle simulator allows characters to fight each other to test damage calculations and class differences.
 
 ## 🛡️ Features
+
 1. Multi-Level Inheritance Structure
 
 Characters follow a clear hierarchy:
@@ -107,7 +108,3 @@ Run the program from your terminal using:
 
 python3 project2.py
 
-Feel free to add your own creative touches for bonus points:
-- Additional character classes beyond the three required
-- More weapon types with different properties
-- Enhanced special abilities with unique effects
