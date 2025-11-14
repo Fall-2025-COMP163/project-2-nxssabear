@@ -51,8 +51,6 @@ Rogue: Sneak Attack 🗡️
 
 Necromancer (Bonus): Drain Life 🩸
 
-Abilities greatly affect damage output and strategy.
-
 ## 4. Weapon Composition System
 
 A standalone Weapon class is included to demonstrate HAS-A relationships.
@@ -79,8 +77,6 @@ Results comparison
 
 Automatic winner declaration
 
-Perfect for testing polymorphism and damage interactions.
-
 # 🌟 Creative Touches
 
 Bonus Class: Necromancer — A fully custom class with lifesteal mechanics and dark-magic combat.
@@ -90,8 +86,6 @@ Enhanced stat formatting for cleaner, stylized output.
 Distinct damage formulas for each class, emphasizing RPG character variety.
 
 Critical hit system for the Rogue, adding unpredictability and flavor.
-
-These additions expand the system beyond requirements and make each character feel unique.
 
 # 📝 Notes
 
