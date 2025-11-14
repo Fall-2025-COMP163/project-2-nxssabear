@@ -52,18 +52,22 @@ class SimpleBattle:
 # YOUR CLASSES TO IMPLEMENT (6 CLASSES TOTAL)
 # ============================================================================
 
+import random
+
 class Character:
     """
     Base class for all characters.
     This is the top of our inheritance hierarchy.
     """
-    
+    # character attributes: name, health, strength, magic
     def __init__(self, name, health, strength, magic):
         """Initialize basic character attributes"""
-        # TODO: Set the character's name, health, strength, and magic
-        # These should be stored as instance variables
-        pass
         
+        self.name = name
+        self.health = health
+        self.strength = strength
+        self.magic = magic
+
     def attack(self, target):
         """
         Basic attack method that all characters can use.
@@ -72,10 +76,15 @@ class Character:
         2. Apply damage to the target
         3. Print what happened
         """
-        # TODO: Implement basic attack
+       # self.target = target
+
         # Damage should be based on self.strength
+        damage = (self.strength * 1.5)
+
         # Use target.take_damage(damage) to apply damage
-        pass
+        target.take_damage(damage)
+
+        print(f"{self.name} attacks {target.name} for {damage} damage!")
         
     def take_damage(self, damage):
         """
@@ -83,17 +92,28 @@ class Character:
         Health should never go below 0.
         """
         # TODO: Implement taking damage
+        self.health -= damage 
+        
         # Reduce self.health by damage amount
         # Make sure health doesn't go below 0
-        pass
+        if self.health < 0:
+            self.health = 0
         
     def display_stats(self):
         """
         Prints the character's current stats in a nice format.
         """
         # TODO: Print character's name, health, strength, and magic
-        # Make it look nice with formatting
-        pass
+        
+        print("." * 40)
+        print(f"| C H A R A C T E R   S T A T U S | Name: ~ {self.name.upper():<8}~ |")
+        print("-" * 40)
+        print(f"| {'Attribute':<20} | {'Value':<15} ") 
+        print(f"| {'-' * 20} | {'-' * 15} |")
+        print(f"| Health {'(HP)':<13} | {self.health:<15} ")
+        print(f"| Strength {'(STR)':<11} | {self.strength:<15} ")
+        print(f"| Mana {'(MP)':<15} | {self.magic:<15} ")
+        print("." * 40)
 
 class Player(Character):
     """
