@@ -106,5 +106,4 @@ The battle simulator was not modified, as instructed.
 
 Run the program from your terminal using:
 
-python3 project2.py
-
+python project2_starter.py
