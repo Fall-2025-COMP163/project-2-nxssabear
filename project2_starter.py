@@ -189,6 +189,8 @@ class Warrior(Player):
         damage = (self.strength * 3)
         target.take_damage(damage)
         print(f"{self.name} uses Power Strike on {target.name} for {damage} damage!")
+
+
 class Mage(Player):
     """
     Mage class - magical spellcaster.
@@ -202,7 +204,7 @@ class Mage(Player):
         """
         # TODO: Call super().__init__() with mage-appropriate stats
         # Suggested stats: health=80, strength=8, magic=20
-        pass
+        super().__init__(name, "Mage", 80, 8, 20)
         
     def attack(self, target):
         """
@@ -211,7 +213,9 @@ class Mage(Player):
         """
         # TODO: Implement mage attack
         # Should use self.magic for damage calculation instead of strength
-        pass
+        damage = (self.magic * 2.5)
+        target.take_damage(damage)
+        print(f"{self.name} casts a spell on {target.name} for {damage} damage!")
         
     def fireball(self, target):
         """
@@ -219,7 +223,10 @@ class Mage(Player):
         """
         # TODO: Implement fireball spell
         # Should do magic-based damage with bonus
-        pass
+        damage = (self.magic * 2) + 10
+        target.take_damage(damage)
+        print(f"{self.name} casts Fireball on {target.name} for {damage} damage!")
+        
 
 class Rogue(Player):
     """
