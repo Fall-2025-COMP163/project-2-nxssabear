@@ -1,10 +1,10 @@
 
 ## COMP 163 - Project 2: Character Abilities Showcase
 
-# Name: Vanessa Gray
-# Date: 13-Nov-2025
+ Name: Vanessa Gray
+ Date: 13-Nov-2025
 
-# AI Usage: AI assisted with overridden attack logic, debugging the Mage fireball and Rogue critical hit system, creating the bonus Necromancer class, and writing this README file.
+ AI Usage: AI assisted with overridden attack logic, debugging the Mage fireball and Rogue critical hit system, creating the bonus Necromancer class, and writing this README file.
 
 ## ✨ Project Overview
 
