@@ -1,18 +1,18 @@
 
-## COMP 163 - Project 2: Character Abilities Showcase
+# COMP 163 - Project 2: Character Abilities Showcase
 
  Name: Vanessa Gray
  Date: 13-Nov-2025
 
  AI Usage: AI assisted with overridden attack logic, debugging the Mage fireball and Rogue critical hit system, creating the bonus Necromancer class, and writing this README file.
 
-## ✨ Project Overview
+# ✨ Project Overview
 
 The Character Abilities Showcase demonstrates inheritance, polymorphism, method overriding, and special abilities across multiple fantasy RPG-style classes. Each character features unique combat mechanics, stat profiles, and special moves. The included battle simulator allows characters to fight each other to test damage calculations and class differences.
 
-## 🛡️ Features
+# 🛡️ Features
 
-1. Multi-Level Inheritance Structure
+## 1. Multi-Level Inheritance Structure
 
 Characters follow a clear hierarchy:
 
@@ -24,7 +24,7 @@ Warrior, Mage, Rogue, Necromancer → specialized child classes
 
 Each subclass overrides attack behavior and includes a signature ability.
 
-2. Polymorphic Combat System
+## 2. Polymorphic Combat System
 
 All characters share the same method name (attack()), but each class behaves differently:
 
@@ -38,7 +38,7 @@ Necromancers drain life with dark magic
 
 The same call → different output depending on the class.
 
-3. Special Abilities
+## 3. Special Abilities
 
 Each class includes one powerful, unique move:
 
@@ -52,7 +52,7 @@ Necromancer (Bonus): Drain Life 🩸
 
 Abilities greatly affect damage output and strategy.
 
-4. Weapon Composition System
+## 4. Weapon Composition System
 
 A standalone Weapon class is included to demonstrate HAS-A relationships.
 
@@ -66,7 +66,7 @@ A display method
 
 Characters can have weapons without inheriting from them.
 
-5. Battle Simulator
+## 5. Battle Simulator
 
 The provided SimpleBattle class (not modified) simulates:
 
@@ -80,7 +80,7 @@ Automatic winner declaration
 
 Perfect for testing polymorphism and damage interactions.
 
-## 🌟 Creative Touches
+# 🌟 Creative Touches
 
 Bonus Class: Necromancer — A fully custom class with lifesteal mechanics and dark-magic combat.
 
@@ -92,7 +92,7 @@ Critical hit system for the Rogue, adding unpredictability and flavor.
 
 These additions expand the system beyond requirements and make each character feel unique.
 
-## 📝 Notes
+# 📝 Notes
 
 All class methods are structured for readability and testability.
 
@@ -102,7 +102,7 @@ The project is easily expandable — new classes, abilities, or weapons can be a
 
 The battle simulator was not modified, as instructed.
 
-## ▶️ How to Run
+# ▶️ How to Run
 
 Run the program from your terminal using:
 
