@@ -1,10 +1,9 @@
 """
 COMP 163 - Project 2: Character Abilities Showcase
-Name: [Your Name Here]
-Date: [Date]
+Name: Vanessa Gray
+Date: 2025-11-13
 
-AI Usage: [Document any AI assistance used]
-Example: AI helped with inheritance structure and method overriding concepts
+AI Usage: AI was used to help with override methods, debug/creation of the fireball attack/Rouge's attack, and create the README file.
 """
 
 # ============================================================================
