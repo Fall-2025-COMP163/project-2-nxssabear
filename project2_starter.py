@@ -270,8 +270,41 @@ class Rogue(Player):
         damage = (self.strength * 2) * 2  # Guaranteed critical hit
         target.take_damage(damage)
         print(f"{self.name} uses Sneak Attack on {target.name} for {damage} damage!")
-        
 
+#bonus class  
+class Necromancer(Player):
+    """
+    Necromancer class - dark magic user.
+    Inherits from Player.
+    """
+    # necromancer attributes: name, health, strength, magic
+    def __init__(self, name):
+        """
+        Create a necromancer with appropriate stats.
+        Necromancers should have: medium health, low strength, high magic
+        """
+        super().__init__(name, "Necromancer", 85, 7, 20)
+    
+    def attack(self, target):
+        """
+        Override the basic attack to make it necromancer-specific.
+        Necromancers should use dark magic for damage.
+        """
+        damage = (self.magic * 2.5) # Use magic for damage calculation
+        target.take_damage(damage)
+        print(f"{self.name} casts a dark spell on {target.name} for {damage} damage!")
+    
+    # Special ability
+    def drain_life(self, target):
+        """
+        Special necromancer ability - drains life from the target to heal self.
+        """
+        damage = (self.magic * 1.7)
+        target.take_damage(damage)
+        self.health += damage * 0.7  # Heal for half the damage dealt
+        print(f"{self.name} uses Drain Life on {target.name} for {damage} damage and heals for {damage * 0.7} health!")
+
+        
 class Weapon:
     """
     Weapon class to demonstrate composition.
