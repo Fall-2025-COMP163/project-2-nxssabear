@@ -1,145 +1,111 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/mMxhKicI)
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=21643371&assignment_repo_type=AssignmentRepo)
+
 # COMP 163 - Project 2: Character Abilities Showcase
 
-## 🎯 Project Overview
+Name: Vanessa Gray
+Date: 13-Nov-2025
 
-Build a simple character system that demonstrates mastery of object-oriented programming fundamentals: inheritance, method overriding, polymorphism, and composition. This project focuses on core OOP concepts without the complexity of a full game system.
+AI Usage: AI assisted with overridden attack logic, debugging the Mage fireball and Rogue critical hit system, creating the bonus Necromancer class, and writing this README file.
 
-## 📋 Getting Started
+## ✨ Project Overview
 
-1. **Complete your implementation** in `project2_starter.py`
-2. **Test your code** by running: `python project2_starter.py`
-3. **Run automated tests** with: `python -m pytest tests/ -v`
-4. **Commit and push** to see GitHub test results
+The Character Abilities Showcase demonstrates inheritance, polymorphism, method overriding, and special abilities across multiple fantasy RPG-style classes. Each character features unique combat mechanics, stat profiles, and special moves. The included battle simulator allows characters to fight each other to test damage calculations and class differences.
 
-## 🏗️ What You're Building
+## 🛡️ Features
+1. Multi-Level Inheritance Structure
 
-### **Class Structure (6 Classes Total)**
+Characters follow a clear hierarchy:
 
-```
-Character (base class)
-    ↓
-Player (inherits from Character)  
-    ↓
-Warrior, Mage, Rogue (inherit from Player)
+Character → base stats & attacks
 
-Weapon (composition - separate class)
-```
+Player → adds class info, level, experience
 
-### **Required Stats for Each Class:**
+Warrior, Mage, Rogue, Necromancer → specialized child classes
 
-| Class   | Health | Strength | Magic | Special Ability |
-|---------|--------|----------|-------|-----------------|
-| Warrior | 120    | 15       | 5     | Power Strike    |
-| Mage    | 80     | 8        | 20    | Fireball        |
-| Rogue   | 90     | 12       | 10    | Sneak Attack    |
+Each subclass overrides attack behavior and includes a signature ability.
 
-## 🎮 Core Functionality
+2. Polymorphic Combat System
 
-### **All Characters Must Have:**
-- `attack(target)` - Basic attack method
-- `take_damage(damage)` - Reduce health
-- `display_stats()` - Print character information
+All characters share the same method name (attack()), but each class behaves differently:
 
-### **Players Additionally Have:**
-- `character_class` attribute (like "Warrior", "Mage")
-- `level` and `experience` attributes
-- Enhanced `display_stats()` that shows player info
+Warriors hit harder with physical power
 
-### **Special Abilities (Each Class):**
-- **Warrior**: `power_strike(target)` - High damage attack
-- **Mage**: `fireball(target)` - Magic damage attack
-- **Rogue**: `sneak_attack(target)` - Critical hit attack
+Mages deal magic-based damage
 
-### **Weapons (Composition):**
-- `Weapon(name, damage_bonus)` - Characters can HAVE weapons
-- `display_info()` - Show weapon information
+Rogues can land critical hits
 
-## ✅ Testing Your Code
+Necromancers drain life with dark magic
 
-### **Local Testing**
-```bash
-# Run all tests
-python -m pytest tests/ -v
+The same call → different output depending on the class.
 
-# Run specific test categories
-python -m pytest tests/test_inheritance.py -v
-python -m pytest tests/test_method_overriding.py -v
-python -m pytest tests/test_special_abilities.py -v
+3. Special Abilities
 
-# Test your main program
-python project2_starter.py
-```
+Each class includes one powerful, unique move:
 
-### **GitHub Testing**
+Warrior: Power Strike 💥
 
-After pushing your code, check the **Actions** tab to see automated test results:
+Mage: Fireball 🔥
 
-- ✅ **Inheritance Tests** (20 points) - Class structure and inheritance chain
-- ✅ **Method Overriding Tests** (20 points) - Polymorphism and customized methods
-- ✅ **Special Abilities Tests** (15 points) - Character abilities and composition
+Rogue: Sneak Attack 🗡️
 
-## 🎮 Example Usage
+Necromancer (Bonus): Drain Life 🩸
 
-Your program should work like this:
+Abilities greatly affect damage output and strategy.
 
-```python
-# Create characters (inheritance)
-warrior = Warrior("Marcus")
-mage = Mage("Aria")  
-rogue = Rogue("Shadow")
+4. Weapon Composition System
 
-# Polymorphism - same method, different behavior
-for character in [warrior, mage, rogue]:
-    character.attack(target)  # Each attacks differently
+A standalone Weapon class is included to demonstrate HAS-A relationships.
 
-# Special abilities
-warrior.power_strike(enemy)
-mage.fireball(enemy)
-rogue.sneak_attack(enemy)
+Weapons have:
 
-# Composition
-sword = Weapon("Iron Sword", 15)
-sword.display_info()
+A name
 
-# Test battle system (provided for you)
-battle = SimpleBattle(warrior, mage)
-battle.fight()
-```
+A damage bonus
 
-## 🎲 SimpleBattle System (Provided)
+A display method
 
-You have a **SimpleBattle** class already written that you can use to test your characters:
+Characters can have weapons without inheriting from them.
 
-```python
-battle = SimpleBattle(character1, character2)
-battle.fight()  # Simulates a simple battle
-```
+5. Battle Simulator
 
-**⚠️ DO NOT MODIFY the SimpleBattle class** - it's provided for testing your implementations.
+The provided SimpleBattle class (not modified) simulates:
 
-## ⚠️ Important Notes
+Stat display
 
-### **Protected Files**
-- **DO NOT MODIFY** files in the `tests/` directory
-- **DO NOT MODIFY** the `SimpleBattle` class
-- Modifying protected files will result in automatic academic integrity violation
+Attack rounds
 
-### **AI Usage Policy**
-- ✅ **Allowed**: AI assistance for implementation, debugging, learning
-- 📝 **Required**: Document AI usage in code comments
-- 🎯 **Must be able to explain**: Every class and method during interview
+Results comparison
 
-## 🏆 Grading
+Automatic winner declaration
 
-- **Inheritance Tests (20%)**: Proper 3-level inheritance chain
-- **Method Overriding (20%)**: Polymorphism and customized behaviors
-- **Special Abilities (15%)**: Character-specific methods and composition
-- **Code Quality (5%)**: Professional comments and documentation
-- **Interview (40%)**: Code explanation and live coding
+Perfect for testing polymorphism and damage interactions.
 
-## 🎨 Bonus Creative Elements
+## 🌟 Creative Touches
+
+Bonus Class: Necromancer — A fully custom class with lifesteal mechanics and dark-magic combat.
+
+Enhanced stat formatting for cleaner, stylized output.
+
+Distinct damage formulas for each class, emphasizing RPG character variety.
+
+Critical hit system for the Rogue, adding unpredictability and flavor.
+
+These additions expand the system beyond requirements and make each character feel unique.
+
+## 📝 Notes
+
+All class methods are structured for readability and testability.
+
+Health never drops below 0 due to safety logic in take_damage().
+
+The project is easily expandable — new classes, abilities, or weapons can be added with minimal changes.
+
+The battle simulator was not modified, as instructed.
+
+## ▶️ How to Run
+
+Run the program from your terminal using:
+
+python3 project2.py
 
 Feel free to add your own creative touches for bonus points:
 - Additional character classes beyond the three required
